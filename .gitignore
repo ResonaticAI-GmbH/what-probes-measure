@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv*/
+# Hidden-State-Dumps (~2,2 GB) sind aus den Extraktions-Skripten reproduzierbar.
+runs/**/*.npy
+!runs/**/*_probe_s1.npy
+runs/**/*.meta.json

@@ -1,0 +1,11 @@
+# Python 3.12.3. Exakt die Versionen, mit denen die Zahlen im Paper erzeugt wurden.
+# torch ist plattformabhaengig (hier: NVIDIA GB10, CUDA 13) -- ggf. passendes Wheel waehlen.
+torch==2.11.0
+transformers==5.5.4
+tokenizers==0.22.2
+safetensors==0.7.0
+huggingface_hub==1.11.0
+accelerate==1.13.0
+datasets==4.8.4
+numpy==2.4.4
+peft==0.19.1
