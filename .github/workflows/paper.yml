@@ -1,0 +1,31 @@
+name: Build paper
+
+on:
+  push:
+    paths:
+      - 'paper/**'
+      - '.github/workflows/paper.yml'
+  pull_request:
+    paths:
+      - 'paper/**'
+      - '.github/workflows/paper.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: wtfjoke/setup-tectonic@v3
+
+      - name: Compile paper
+        working-directory: paper
+        run: tectonic -X compile main.tex
+
+      - name: Check generated PDF is present
+        working-directory: paper
+        run: test -s main.pdf

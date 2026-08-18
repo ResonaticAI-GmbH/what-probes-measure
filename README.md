@@ -40,7 +40,8 @@ See [`REPRODUCE.md`](REPRODUCE.md). Tables 1 and 3 and the utility numbers run *
 minutes** from the caches included here; anything needing hidden-state dumps (~2.2 GB) requires
 one extraction pass on a GPU, and those analyses' outputs ship as `.txt`/`.log` under `runs/`.
 
-The paper source is in [`paper/`](paper/) and builds with `tectonic main.tex`.
+The paper is available as the compiled [PDF](paper/main.pdf); its source is in
+[`paper/main.tex`](paper/main.tex). Rebuild it with `tectonic -X compile main.tex`.
 
 ## Repository layout
 
